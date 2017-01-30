@@ -32,13 +32,22 @@ class LatestBooks::CLI
       if input=="list"
         list_books
       elsif  input.to_i > 0
-      system(open("http://www.barnesandnoble.com/#{@books[input.to_i-1].url.join(" ")}"))
-    else
-      puts "wrong choice,enter list or a number or exit."
+      # system(open("http://www.barnesandnoble.com/#{@books[input.to_i-1].url.join(" ")}"))
+      # Launchy.open("http://www.barnesandnoble.com/#{@books[input.to_i-1].url[0]}")
+        link = "http://www.barnesandnoble.com/#{@books[input.to_i-1].url[0]}"
+        if RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/
+          system "start #{link}"
+        elsif RbConfig::CONFIG['host_os'] =~ /darwin/
+          system "open #{link}"
+        elsif RbConfig::CONFIG['host_os'] =~ /linux|bsd/
+          system "xdg-open #{link}"
+        end
+      else
+        puts "wrong choice,enter list or a number or exit."
       end
     end
-
   end
+  
   def see_you
     puts "Thank you for using our application. See you next time!"
     puts "***     *** "
