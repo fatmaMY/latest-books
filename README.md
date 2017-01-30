@@ -1,41 +1,15 @@
-# LatestBooks
+# Latest Books
+Welcome to Latest Books CLI gem application. It will provides you with the new released top books that are available,
+with the author's name and the price.
+When you choose the book that you like to know more about, it will open the page of that book,Whare you can read a summary
+of the book or even buy on line it if you like.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/latest_books`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'latest_books'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install latest_books
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/latest_books. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+#user instructions:
+when the user call Latest Books it will drop a list of the new released books available along with the author's name
+and their prices.The user will be asked to enter number of the book that he would like to know about.
+A page of the site of the chosen book will appear upon choosing the number.
+The user should enter "list" or "exit" if he or she  wants the list again or to exit the cli gem.  
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
